@@ -1,0 +1,53 @@
+.playboard_game{
+	position: absolute;
+	width: 40%;
+	top:13vw;
+	left: 45%;
+}
+.menu_bg{
+	position: absolute;
+	width: 30%;
+	top:1vw;
+	left: 1%;
+}
+.offer{
+	position: absolute;
+	top:39vw;
+	left: 52%;
+}
+.result{
+	position: absolute;
+	top:20vw;
+	left: 52%;
+}
+.showBtn{
+	position: absolute;
+	top:21vw;
+	left: 74%;
+}
+.showTxt{
+	position: absolute;
+	top:22vw;
+	left: 74%;
+}
+.showTxt1{
+	position: absolute;
+	top:23vw;
+	left: 74%;
+}
+.newGame{
+	position: absolute;
+	top: 23vw;
+	left: 11%;
+}
+.toIntro{
+	position: absolute;
+	top: 27vw;
+	left: 12.5%;
+}
+.toIntroEN{
+	position: absolute;
+	top: 27vw;
+	left: 14%;
+}
+

@@ -1,0 +1,58 @@
+img{
+	max-height: 100%;
+	max-width: 100%;
+}
+.bg { 
+  background-image: url("Fon.png");
+  position: static;
+  border: none;
+  background-repeat: no-repeat; 
+  margin-left: -4px;
+  margin-top: -4px; 
+ }
+.en{
+	position:absolute;
+	top: 1.5vw;
+	left: 84.5%;
+	cursor: pointer;
+	max-height: 10%;
+	max-width: 10%;
+}
+.name{
+	position: absolute;
+	top: 23vw;
+	left: 36%;
+	max-width: 30%;
+}
+
+.playbutton{
+	position: absolute;
+	top:81.5%;
+	left: 32%;
+	cursor: pointer;
+	max-height: 30%;
+	max-width: 30%;
+}
+.BGplaybuttontxt{
+	position: absolute;
+	top:-27%;
+	left: 20%;
+	user-select: none;
+}
+.ENplaybuttontxt{
+	position: absolute;
+	top:-27%;
+	left: 30%;
+	user-select: none;
+}
+
+h1{
+	color: rgb(180, 28, 36);
+}
+h1:hover{
+	color: rgb(206, 153, 170);
+}
+a:link{
+	text-decoration: none;
+}
+

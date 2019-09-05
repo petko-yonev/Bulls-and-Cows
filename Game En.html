@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Бикове и Крави||Bulls and Cows</title>
+    <meta charset="UTF-8">
+
+
+    <link href="css\main.css" rel="stylesheet" type="text/css" />
+    <link href="css\game.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+    <div class="bg">
+
+        <!--Background-->
+        <img src="images/Fon.png"class="bg" >
+
+    </div>
+
+    <div class="en">
+
+        <!--BG/EN Button-->
+        <a href="Игра БГ.html">
+        <img src="images/en or bg lang.png"  >  
+        </a>
+
+    </div>
+
+    <div class="playboard_game">
+
+        <!--Playboard-->
+        <img src="images/play board.png" >
+
+    </div>
+
+    <div class="menu_bg">
+
+        <!--Playmenu-->
+        <img src="images/en name and menu.png" >
+
+    </div>
+
+    <div class="offer">
+
+        <input type="text" name="offer" id="offer" maxlength="4" style="font-size: 1vw">
+        <button onclick="Prop()" style="font-size: 1vw">Offer</button><br>
+
+    </div>
+
+    <div class="result">
+
+        <p id="showBulls" style="font-size: 1vw"></p>
+        <p id="showCows" style="font-size: 1vw"></p>
+
+    </div>
+
+    <div>
+
+        <button onclick="show()" style="font-size: 1vw" class="showBtn">Show price</button>
+        <p id="getNumber" class="showTxt"></p>
+
+    </div>
+
+    <div class="newGame">
+
+        <a href="Game En.html">
+        <h1 style="font-size: 2vw"> New Game</h1>
+        </a>
+
+    </div>
+
+    <div class="toIntroEN">
+
+        <a href="Introduction on EN.html">
+        <h1 style="font-size: 2vw"> Help</h1>
+        </a>
+
+    </div>
+
+</body>
+
+    <script>
+        //Генериране на число
+            /*var minNumber = 0; 
+            var maxNumber = 9; 
+            var num1 = Math.floor(Math.random() * (maxNumber ) + minNumber);
+            var num2 = Math.floor(Math.random() * (maxNumber ) + minNumber);
+            var num3 = Math.floor(Math.random() * (maxNumber ) + minNumber);
+            var num4 = Math.floor(Math.random() * (maxNumber ) + minNumber);  
+            //var split = [num1, num2, num3, num4];
+            var split = [8, 3, 3, 5] // Число за тестове
+            */
+
+        //Генериране на число (без повторение)
+        var minNumber = 0; 
+        var maxNumber = 9; 
+        var num1 = Math.floor(Math.random() * (maxNumber ) + minNumber);
+        do {
+            var num2 = Math.floor(Math.random() * (maxNumber ) + minNumber);
+        } while (num2 === num1);
+        do {
+            var num3 = Math.floor(Math.random() * (maxNumber ) + minNumber);
+        } while (num3 === num2 || num3 === num1);
+        do {
+            var num4 = Math.floor(Math.random() * (maxNumber ) + minNumber);
+        } while (num4 === num3 || num4 === num2 || num4 === num1);
+
+        var split = [num1, num2, num3, num4];
+
+
+        function show(){
+            //Извеждане на случайното число
+        document.getElementById("getNumber" ).innerHTML = split; 
+        }
+
+        //Предложение
+        function Prop(){
+            var offer = parseInt(document.getElementById("offer").value);
+            var offer1 = parseInt(offer / 1000);
+            var offer2 = parseInt(offer / 100)-parseInt(offer1 * 10);
+            var offer3 = parseInt(offer / 10)-(parseInt(offer1 * 100) +parseInt(offer2 * 10));
+            var offer4 = parseInt(offer / 1)-(parseInt(offer1 * 1000) +parseInt(offer2 * 100) + parseInt(offer3 * 10)); 
+            //Масив от разделено предложение на 4 различни цифри
+            var splitOffer = [offer1, offer2, offer3, offer4];
+        
+            let mark = [];
+            let bulls = 0;
+            let cows = 0;
+
+            for( let i = 0 ; i<split.length; i++){
+                let element = split[i];
+                if (mark.indexOf(element) !== -1){
+                    continue;
+                }
+                let otherElement = splitOffer.indexOf(element);
+
+                if(split[i] === splitOffer[i]){
+                    bulls++;
+                } else if (otherElement !== -1) {
+                    cows++;
+                }
+                mark.push(element);
+            }
+
+            if (bulls == 1){
+                var numBulls = bulls + " Bull"
+            } else if (bulls == 0 ){
+                var numBulls = "No Bulls"
+            } else {
+                var numBulls = bulls + " Bulls"
+            }
+
+            if (cows == 1){
+                var numCows = cows + " Cow"
+            } else if (cows == 0 ){
+                var numCows = "No Cows"
+            } else {
+                var numCows = cows + " Cows"
+            }
+            
+            //Извеждане на предложението
+            document.getElementById("showBulls").innerHTML = numBulls;
+            document.getElementById("showCows").innerHTML = numCows;
+             
+        }
+
+    </script>
+
+</html>

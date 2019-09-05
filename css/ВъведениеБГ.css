@@ -1,0 +1,82 @@
+
+.playboard{
+	position: absolute;
+	width: 40%;
+	top:13vw;
+	left: 30%;
+}
+
+.Introduction_text{
+	position: absolute;
+	top: 5%;
+	left: 26%;
+	letter-spacing: 15%;
+	text-shadow: 2px 2px rgb(200,200,200);
+	user-select: none;
+}
+.Introduction_text_1{
+	position: absolute;
+	top: 25%;
+	left: 10%;
+	right: 10%;
+	user-select: none;
+}
+.Introduction_text_2{
+	position: absolute;
+	top: 20%;
+	left: 10%;
+	right: 10%;
+	user-select: none;
+}
+.Button_down{
+	position: absolute;
+	top:85%;
+	left: 38%;
+	cursor: pointer;
+	max-height: 24%;
+	max-width: 24%;
+}
+.Button_up{
+	position: absolute;
+	top:5%;
+	left: 38%;
+	cursor: pointer;
+	max-height: 24%;
+	max-width: 24%;
+}
+.playbutton_Intro{
+	position: absolute;
+	top:85%;
+	left: 38%;
+	cursor: pointer;
+	max-height: 24%;
+	max-width: 24%;
+}
+.BGplaybutton_Intro{
+	position: absolute;
+	top:50%;
+	left: 100%;
+	user-select: none;
+	max-height: 170%;
+	max-width: 170%;
+}
+.bg_text{
+	position: absolute;
+	top:-23%;
+	left: 19%;
+	user-select: none;
+}
+.Introduction_text_EN{
+	position: absolute;
+	top: 5%;
+	left: 33%;
+	letter-spacing: 15%;
+	text-shadow: 2px 2px rgb(200,200,200);
+	user-select: none;
+}
+.Enplaybuttontxt_Intro{
+	position: absolute;
+	top:-15%;
+	left: 31%;
+	user-select: none;
+}
